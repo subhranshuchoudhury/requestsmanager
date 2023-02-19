@@ -1,0 +1,29 @@
+.QueryContainer {
+  margin-top: 50px;
+  margin-left: 20px;
+  height: 80vh;
+  overflow-y: scroll;
+  width: 40%;
+  /* background-color: red; */
+  display: inline-block;
+}
+
+.QueryContainer2 {
+  display: inline-block;
+  width: 55%;
+  margin-left: 10px;
+  position: absolute;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .QueryContainer2 {
+    display: block;
+    width: 100%;
+    margin: 10px auto 10px auto;
+  }
+  .QueryContainer {
+    text-align: center;
+    width: 90%;
+  }
+}

@@ -1,0 +1,58 @@
+.querycard {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  margin: 10px;
+}
+
+.sc-2-mb-5 {
+  scale: 2;
+  margin-bottom: 5px;
+  margin-left: 8px;
+}
+
+.title-qr {
+  background-color: aliceblue;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.pageTitle {
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+/* .orderP {
+  font-weight: bold;
+} */
+.orderP-date {
+  color: gray;
+  margin-left: 25px;
+}
+
+.progressView {
+  padding: 5px;
+}
+
+.up-down-btn {
+  margin: 2px;
+  text-align: right;
+}
+
+.ex-btn {
+  border-radius: 23px;
+  margin: 15px;
+  margin-bottom: 8px;
+  scale: 2;
+  color: rgb(64, 46, 255);
+}
+
+.ex-btn:hover {
+  color: black;
+  cursor: pointer;
+}
