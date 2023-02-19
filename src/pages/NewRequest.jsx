@@ -31,7 +31,10 @@ const NewRequest = () => {
       body: new URLSearchParams({ title: inputs.title }),
     };
 
-    fetch("http://localhost:8080/api/user/request", options)
+    fetch(
+      "https://request-manager-backend.onrender.com/api/user/request",
+      options
+    )
       .then((response) => response.json())
       .then((response) => {
         setIsLoading(false);

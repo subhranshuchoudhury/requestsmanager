@@ -15,7 +15,7 @@ const Layout = () => {
         },
       };
 
-      fetch("http://localhost:8080/api/verify", options)
+      fetch("https://request-manager-backend.onrender.com/api/verify", options)
         .then((response) => response.json())
         .then((response) => {
           console.log(response);

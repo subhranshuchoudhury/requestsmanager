@@ -38,7 +38,10 @@ const Register = () => {
       }),
     };
 
-    await fetch("http://localhost:8080/api/auth/signup", options)
+    await fetch(
+      "https://request-manager-backend.onrender.com/api/auth/signup",
+      options
+    )
       .then((response) => response.json())
       .then((response) => {
         console.log(response);

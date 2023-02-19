@@ -20,7 +20,7 @@ const QueryCard = (props) => {
       },
     };
 
-    fetch("http://localhost:8080/api/requests", options)
+    fetch("https://request-manager-backend.onrender.com/api/requests", options)
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
