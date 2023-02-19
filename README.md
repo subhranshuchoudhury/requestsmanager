@@ -12,5 +12,13 @@
 
 # WEBSITE (BACKEND) : [WEBSITE](https://request-manager-backend.vercel.app/)
 
-1. POST GET
-2. ADMIN, MODERATOR, NORMAL USER
+### frontend start command
+
+1. `npm i`
+2. `npm start`
+
+### backend start command
+
+1. `go to this repo :` https://github.com/subhranshuchoudhury/request-manager-backend
+2. `npm i`
+3. `node index.js`
