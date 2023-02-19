@@ -3,19 +3,21 @@ import MiniDashboard from "../components/MiniDashboard";
 import QueryCard from "../components/QueryCard";
 import "./query.css";
 const Query = (props) => {
-  const [Message, setMessage] = useState("");
-  const chatMessage = (message) => {
-    // alert("Message " + message);
-    setMessage(message);
+  const [RequestID, setRequestID] = useState("");
+  const [RequestTitle, setRequestTitle] = useState("");
+  const updateRequest = (RequestID, RequestTitle) => {
+    // alert("RequestID " + RequestID);
+    setRequestID(RequestID);
+    setRequestTitle(RequestTitle);
   };
   return (
     <>
       <div className="QueryContainer">
-        <QueryCard chatMessage={chatMessage} />
+        <QueryCard updateRequest={updateRequest} />
       </div>
 
       <div className="QueryContainer2">
-        <MiniDashboard message={Message} />
+        <MiniDashboard RequestID={RequestID} RequestTitle={RequestTitle} />
       </div>
     </>
   );

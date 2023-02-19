@@ -61,6 +61,7 @@ const Login = () => {
   };
   return (
     <div className="loginFormHolder">
+      <h1 className="pageTitle">Login</h1>
       <form>
         <div class="mb-4">
           <label htmlFor="exampleInputUsername" className="form-label">

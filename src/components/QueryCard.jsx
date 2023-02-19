@@ -4,10 +4,12 @@ import { Animate } from "react-simple-animate";
 import { FcFaq } from "react-icons/fc";
 import { BiLike, BiDislike } from "react-icons/bi";
 import Loader from "./Loader";
+import { useNavigate } from "react-router-dom";
 
 const QueryCard = (props) => {
   const [Requests, setRequests] = useState([]);
   const [isLoading, setisLoading] = useState(true);
+  const navigate = useNavigate();
   useEffect(() => {
     loadRequests();
   }, []);
@@ -24,6 +26,10 @@ const QueryCard = (props) => {
       .then((response) => response.json())
       .then((response) => {
         console.log(response);
+        if (response.message === "Unauthorized!") {
+          localStorage.clear();
+          navigate("/login");
+        }
         setRequests(response);
         setisLoading(false);
       })
@@ -59,6 +65,17 @@ const QueryCard = (props) => {
                 <>
                   <div className="querycard">
                     <div className="title-qr">{pr.title}</div>
+                    {localStorage.getItem("ROLES").includes("MODERATOR") ? (
+                      <div style={{ width: "100%" }}>
+                        <button
+                          style={{ width: "100%", marginTop: "5px" }}
+                          className="btn btn-success"
+                          onClick={() => props.updateRequest(pr._id, pr.title)}
+                        >
+                          UPDATE
+                        </button>
+                      </div>
+                    ) : null}
                     <br />
                     <p>
                       <button
@@ -99,7 +116,7 @@ const QueryCard = (props) => {
                       <BiDislike className="ex-btn" />
                       <FcFaq
                         className="ex-btn"
-                        onClick={() => props.chatMessage(Math.random())}
+                        onClick={() => alert("I will add it later!")}
                       />
                     </div>
                     <div

@@ -1,0 +1,12 @@
+.pageTitle {
+  margin: 30px;
+  margin-top: 10px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.pageSubTitle {
+  margin-top: 50px;
+  color: #ffff;
+  font-size: x-large;
+}

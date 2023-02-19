@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Layout = () => {
   const navigate = useNavigate();
@@ -66,7 +66,10 @@ const Layout = () => {
                 Queries
               </button>
               <button
-                onClick={() => navigate("/logout")}
+                onClick={() => {
+                  localStorage.clear();
+                  navigate("/login");
+                }}
                 className="btn btn-primary"
               >
                 Logout
